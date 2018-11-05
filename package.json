@@ -1,0 +1,19 @@
+{
+  "name": "highcharts-synchronized-charts",
+  "version": "1.0.0",
+  "description": "An Highcharts library to synchronized charts",
+  "main": "highcharts-synchronized-charts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muffrank/highcharts-synchronized-charts.git"
+  },
+  "author": "Muhammad Umar Farooq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muffrank/highcharts-synchronized-charts/issues"
+  },
+  "homepage": "https://github.com/muffrank/highcharts-synchronized-charts#readme"
+}
