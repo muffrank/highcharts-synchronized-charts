@@ -35,29 +35,6 @@
             this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
         };
 
-        /**
-         * Synchronize zooming through the setExtremes event handler.
-         */
-        H.prototype.syncExtremes = function syncExtremes(e) {
-            var thisChart = this.chart;
-
-            if (e.trigger !== 'syncExtremes') { // Prevent feedback loop
-                Highcharts.each(Highcharts.charts, function (chart) {
-                    if (chart !== thisChart) {
-                        if (chart.xAxis[0].setExtremes) { // It is null while updating
-                            chart.xAxis[0].setExtremes(
-                                e.min,
-                                e.max,
-                                undefined,
-                                false,
-                                { trigger: 'syncExtremes' }
-                            );
-                        }
-                    }
-                });
-            }
-        }
-
     }(Highcharts));
     return (function () {
 
