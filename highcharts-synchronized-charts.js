@@ -39,6 +39,16 @@
              // Show the tooltip
             this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
         };
+        H.Point.prototype.unhighlight = function (event) {
+            event = this.series.chart.pointer.normalize(event);
+            this.onMouseOut(); // Show the hover marker
+            if(this.series.chart.tooltip.options.shared || this.series.chart.tooltip.options['split']){
+                this.series.chart.tooltip.hide([this]);
+            }else{
+                this.series.chart.tooltip.hide(this);
+            }
+            this.series.chart.xAxis[0].hideCrosshair();
+        };
 
     }(Highcharts));
     return (function () {
